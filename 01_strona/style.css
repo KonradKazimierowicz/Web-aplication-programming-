@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(76, 82, 80);
+    color: rgb(255, 255, 255);
+    margin: 5%;
+}
+
+#hr{
+    color: red;
+    border: 2px;
+}
+#ulub_rzecz{
+    color: blue;
+}

@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(56, 56, 56);
+    color: rgb(241, 241, 241);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 30px;
+}
+#powitanie{
+    color: red;
+}
