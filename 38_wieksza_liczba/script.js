@@ -12,7 +12,7 @@ btn.addEventListener('click', function() {
         result.innerHTML = `Liczba ${y} jest większa od liczby ${x}`
     }
     else{
-        result.innerHTML = `Liczba ${y} i liczba ${x} są równe`
+        result.innerHTML = `Liczba ${y} i liczba ${x}`
     }
 
 })

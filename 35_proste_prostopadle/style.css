@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(37, 36, 53);
+    color: white;
+    margin: 20px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+header{
+    background-color: rgb(68, 65, 94);
+    margin-top: 30px;
+    padding: 20px;
+}
+h1
+{
+    color: rgb(205, 205, 245);
+}
+h3
+{
+    color: rgb(205, 205, 245);
+}
+button{
+    background-color: rgb(205, 205, 245);
+    width: 180px;
+    height: 25px;
+    margin: 10px;
+}
