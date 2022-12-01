@@ -13,7 +13,10 @@ function draw() {
 
     background(color(0, 0, 255));
 
-    fill(color(232, 232, 232));
+    fill(color(256));
+    quad(0, 700, 1500, 700, 1500, 750, 0, 750);
+
+    fill(color(190));
     line(750, 100, 750, 275);
     circle(890, 350, 40);
     circle(610, 350, 40);
@@ -69,7 +72,6 @@ function draw() {
     rotate(frameCount / -100.0);
     star(0, 0, 30, 70, 5);
     pop();
-
 
 }
 function star(x, y, radius1, radius2, npoints) {

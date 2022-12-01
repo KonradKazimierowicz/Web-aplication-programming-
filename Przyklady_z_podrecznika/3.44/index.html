@@ -1,0 +1,21 @@
+<!--Przykład 3.44 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Obiekt osoba</title>
+</head>
+<body>
+<script>
+  var osoba = {
+    nazwisko: "Nowacki",
+    imie: "Marek",
+    zawod: "informatyk",
+    function() {
+      document.write(this.nazwisko + ' ' + this.imie);
+    }
+  };
+  osoba.pokaz();
+</script>
+</body>
+</html>
