@@ -1,0 +1,23 @@
+<!--Przykład 3.84-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista formularza</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<form id="form1" action=" " method="post">
+  Imię: <input type="text" name="imie" value="Jan"/><br>
+  Nazwisko: <input type="text" name="nazwisko" value="Kowalski"/><br>
+  <input type="submit" value="Wyślij">
+</form>
+<p>Lista elementów formularza:</p>
+<script>
+  var x = document.getElementById("form1");
+  for (var i = 0; i < x.length; i++) {
+    document.write(x.elements[i].value);
+    document.write("<br>");
+  }
+</script>
+</body>
+</html>

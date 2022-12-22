@@ -1,0 +1,20 @@
+<!-- Przykład 3.75 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Metody obiektu Window</title>
+  <meta charset="UTF-8">
+  <script>
+    var licz = 0;
+    var Id = window.setInterval(
+            function() {
+              alert('działa');
+              licz++;
+              if (licz >= 5) {window.clearInterval(Id);
+              }
+            }, 3000);
+  </script>
+</head>
+<body>
+</body>
+</html>

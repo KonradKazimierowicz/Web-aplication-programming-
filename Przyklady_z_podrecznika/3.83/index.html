@@ -1,0 +1,20 @@
+<!-- przykład 3.83 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Co słychać</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<form id="form1" name="Form1" action=" " method="post">
+  Podaj imię: <input type="text" name="imie" id="imie"/>
+  <button onclick="witaj()">Kliknij!</button>
+</form>
+<script type="text/javascript">
+  function witaj() {
+    var imie = document.forms['Form1'].imie.value;
+    alert('Co słychać, ' + imie + '?');
+  }
+</script>
+</body>
+</html>

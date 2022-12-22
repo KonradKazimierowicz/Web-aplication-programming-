@@ -1,0 +1,19 @@
+<!-- Przykład 3.89 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function ik2() {
+      document.getElementById('ikona').src = "Ikona2.png";
+    }
+    function ik1() {
+      document.getElementById('ikona').src = "Ikona1.png";
+    };
+  </script>
+</head>
+<body>
+<img id="ikona" onmousedown="ik2()" onmouseup="ik1()" sc="Ikona1.png"
+     dth="100" height="100" />
+<p>Kliknij i przytrzymaj!</p>
+</body>
+</html>
