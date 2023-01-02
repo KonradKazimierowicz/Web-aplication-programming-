@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T221</title>
+</head>
+<body>
+<script>
+    function wartoscBezwzgledna1(x){
+        if(x>0) return x;
+        return -x;
+    }
+    function wartoscBezwzgledna2(x){
+        let wynik = (x>0) ? x : -x;
+        return wynik;
+    }
+    function zwieksz(x){
+        x += 1;
+        document.write(x + "<br>");
+    }
+    var arg = 15;
+    zwieksz(arg);
+    document.write(wartoscBezwzgledna1(arg) + "<br>");
+    document.write(wartoscBezwzgledna2(arg));
+</script>
+</body>
+</html>
