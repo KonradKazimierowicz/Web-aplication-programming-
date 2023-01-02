@@ -4,7 +4,7 @@ const wynik = document.querySelector('#result');
 const btn = document.querySelector('button');
 
 btn.addEventListener('click', function(){
-    let bmi = waga.value / ((wzrost.value * wzrost.value/100)) *100
+    let bmi = waga.value / ((wzrost.value **2)/100 ) *100
     wynik.innerHTML = bmiKal(bmi);
     console.log(bmi)
 });
