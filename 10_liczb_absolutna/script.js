@@ -1,5 +1,5 @@
 const btn  = document.querySelector('button');
-const result = document.querySelector('#result');
+const result = document.querySelector('#wynik');
 
 btn.addEventListener('click', function() {
     const x = Number(document.querySelector('#a').value);

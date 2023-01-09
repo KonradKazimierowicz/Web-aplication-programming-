@@ -1,51 +1,39 @@
-const result = document.querySelector(`#result`)
-function czasDoWydarzenia(rok, miesiac, dzien, godzina, minuta, sekunda, milisekunda) {
+const rok1 = document.querySelector('#rok');
+const wynik = document.querySelector('#wynik');
+const btn = document.querySelector('button');
 
-    var aktualnyCzas = new Date();
-    var dataWydarzenia = new Date(rok, miesiac, dzien, godzina, minuta, sekunda, milisekunda);
-    var pozostalyCzas = dataWydarzenia.getTime() - aktualnyCzas.getTime();
+const rok = new Date();
+let rokObc = rok.getFullYear();
 
+document.querySelector('#rokObecny').innerHTML = `Obecny rok: ${rokObc}`;
 
-    if (pozostalyCzas > 0) {
+btn.addEventListener('click', function(){
+    let rokUzy = parseInt(rok1.value);
 
-        var s = pozostalyCzas / 1000;   // sekundy
+    wynik.innerHTML = `Różnica pomiędzy rokiem podanym przez Ciebie a obecnym wynosi ${dni(rokObc, rokUzy)} dni.`;
+});
 
-        var min = s / 60;               // minuty
-
-        var h = min / 60;               // godziny
-
-
-        var sLeft = Math.floor(s % 60);    // pozostało sekund    
-
-        var minLeft = Math.floor(min % 60); // pozostało minut
-
-        var hLeft = Math.floor(h);          // pozostało godzin
-
-
-        if (minLeft < 10)
-
-            minLeft = "0" + minLeft;
-
-        if (sLeft < 10)
-
-            sLeft = "0" + sLeft;
-
-
-        return hLeft + " : " + minLeft + " : " + sLeft;
-
-    } else
-
-        return "Zdarzenie miało już miejsce na naszym globie, to już jest historia i już nie powróci!";
-
+function dni(rokObc, rokUzy){
+    let wynikDni = 0;
+    
+    if(rokObc > rokUzy){
+        while(rokObc !== rokUzy){
+            if(rokObc%4===0 && rokObc%100!==0 || rokObc%400===0){
+                wynikDni += 366;
+            } else{
+                wynikDni += 365;
+            }
+            rokObc--;
+        }
+    } else if(rokUzy > rokObc){
+        while(rokUzy !== rokObc){
+            if(rokUzy%4===0 && rokUzy%100!==0 || rokUzy%400===0){
+                wynikDni += 366;
+            } else{
+                wynikDni += 365;
+            }
+            rokUzy--;
+        }
+    }
+    return wynikDni;
 }
-
-
-result.innerHTML = function () {
-
-    idElement = "tesciur";
-
-    document.getElementById(idElement).innerHTML = czasDoWydarzenia(2010, 11, 20, 20, 0, 0, 0);
-
-    setInterval("document.getElementById(idElement).innerHTML = czasDoWydarzenia(2010, 11, 20, 20, 0, 0, 0)", 1000);
-
-};
